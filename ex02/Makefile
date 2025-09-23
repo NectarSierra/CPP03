@@ -6,7 +6,7 @@
 #    By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 12:47:03 by nsaillez          #+#    #+#              #
-#    Updated: 2025/09/23 10:21:32 by nsaillez         ###   ########.fr        #
+#    Updated: 2025/09/23 12:46:31 by nsaillez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ OUT_NAME = output
 SRCS     = main.cpp \
 		   ClapTrap.cpp \
 		   ScavTrap.cpp \
+		   FragTrap.cpp 
 
 OBJ_DIR  = objs
 OBJS     = $(SRCS:%.cpp=$(OBJ_DIR)/%.o)

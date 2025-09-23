@@ -6,14 +6,14 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:23 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 12:02:54 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 13:13:07 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.h"
 
 // Constructor( void | std::string ), copy constructor, destructor;
-ClapTrap::ClapTrap	( void )
+ClapTrap::ClapTrap( void )
 {
 	std::cout << "Default constructor called" << std::endl;
 	this->name = "Undefined";
@@ -22,7 +22,7 @@ ClapTrap::ClapTrap	( void )
 	this->Attack_damage = 0;
 }
 
-ClapTrap::ClapTrap	( std::string name )
+ClapTrap::ClapTrap( std::string name )
 {
 	std::cout << "Default constructor called" << std::endl;
 	this->name = name;
@@ -31,12 +31,12 @@ ClapTrap::ClapTrap	( std::string name )
 	this->Attack_damage = 0;
 }
 
-ClapTrap::ClapTrap	( const ClapTrap &obj )
+ClapTrap::ClapTrap( const ClapTrap &obj )
 {
 	*this = obj;
 }
 
-ClapTrap::~ClapTrap	( void )
+ClapTrap::~ClapTrap( void )
 {
 	std::cout << "Destructor called" << std::endl;
 }
@@ -52,7 +52,7 @@ const ClapTrap& ClapTrap::operator=	( const ClapTrap &obj )
 }
 
 // Member Functions;
-void ClapTrap::attack	( const std::string& target )
+void ClapTrap::attack( const std::string& target )
 {
 	if (Hit_points <= 0)
 	{
@@ -68,18 +68,16 @@ void ClapTrap::attack	( const std::string& target )
 	std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->Attack_damage << " points of damage!" << std::endl;
 }
 
-void ClapTrap::takeDamage	( unsigned int amount )
+void ClapTrap::takeDamage( unsigned int amount )
 {
 	if ((amount > 0 && this->Hit_points < UINT_MAX + amount))
-	{
-		std::cout << "Error: Underflow detected operation cancelled!" << std::endl;
-		return;
-	}
-	this->Hit_points -= amount;
+		this->Hit_points = 0;
+	else
+		this->Hit_points -= amount;	
 	std::cout << "ClapTrap " << this->name << " take " << amount << " points of damage! It has now " << this->Hit_points << " hit points."<< std::endl;
 }
 
-void ClapTrap::beRepaired	( unsigned int amount )
+void ClapTrap::beRepaired( unsigned int amount )
 {
 	if (Hit_points <= 0)
 	{

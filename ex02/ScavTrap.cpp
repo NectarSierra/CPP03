@@ -6,14 +6,14 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 10:17:41 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 12:21:51 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 13:07:34 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.h"
 
 // Constructor( void | std::string ), copy constructor, destructor;
-ScavTrap::ScavTrap	( void )
+ScavTrap::ScavTrap( void )
 {
 	std::cout << "[ScavTrap] Default constructor called" << std::endl;
 	this->name = "Undefined";
@@ -22,7 +22,7 @@ ScavTrap::ScavTrap	( void )
 	this->Attack_damage = 20;
 }
 
-ScavTrap::ScavTrap	( std::string name )
+ScavTrap::ScavTrap( std::string name )
 {
 	std::cout << "[ScavTrap] Default constructor called" << std::endl;
 	this->name = name;
@@ -31,18 +31,18 @@ ScavTrap::ScavTrap	( std::string name )
 	this->Attack_damage = 20;
 }
 
-ScavTrap::ScavTrap	( const ScavTrap &obj )
+ScavTrap::ScavTrap( const ScavTrap &obj )
 {
 	*this = obj;
 }
 
-ScavTrap::~ScavTrap	( void )
+ScavTrap::~ScavTrap( void )
 {
 	std::cout << "[ScavTrap] Destructor called" << std::endl;
 }
 
 // Overload Operators;
-const ScavTrap& ScavTrap::operator=	( const ScavTrap &obj )
+const ScavTrap& ScavTrap::operator=( const ScavTrap &obj )
 {
 	this->name = obj.name;
 	this->Hit_points = obj.Hit_points;
@@ -52,7 +52,7 @@ const ScavTrap& ScavTrap::operator=	( const ScavTrap &obj )
 }
 
 // Member Functions;
-void ScavTrap::attack	( const std::string& target )
+void ScavTrap::attack( const std::string& target )
 {
 	if (Hit_points <= 0)
 	{
@@ -68,7 +68,7 @@ void ScavTrap::attack	( const std::string& target )
 	std::cout << "[ScavTrap] " << this->name << " attacks " << target << ", causing " << this->Attack_damage << " points of damage!" << std::endl;
 }
 
-void ScavTrap::guardGate	( void )
+void ScavTrap::guardGate( void )
 {
 	std::cout << "[ScavTrap] " << this->name << " is now in Gatekeeper mode. " << std::endl;
 }
