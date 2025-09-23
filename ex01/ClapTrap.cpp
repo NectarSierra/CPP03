@@ -6,11 +6,10 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:23 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 11:59:49 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 12:02:54 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <climits>
 #include "ClapTrap.h"
 
 // Constructor( void | std::string ), copy constructor, destructor;
@@ -92,7 +91,7 @@ void ClapTrap::beRepaired	( unsigned int amount )
 		std::cout << "ClapTrap " << this->name << " has not enough energy!" << std::endl;
 		return;
 	}
-	if ((amount > 0 && this->Hit_points > UINT_MAX + amount))
+	if ((amount > 0 && this->Hit_points > UINT_MAX - amount))
 	{
 		std::cout << "Error: Overflow detected operation cancelled!" << std::endl;
 		return;
