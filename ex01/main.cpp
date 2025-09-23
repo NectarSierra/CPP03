@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:08 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 12:22:34 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 13:09:37 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main( void )
 	
 	ScavTrap* b = new ScavTrap("Jackson");
 	b->attack("TEST");
+	b->guardGate();
 	b->beRepaired(100);
 	b->takeDamage(20);
 	b->takeDamage(20);
