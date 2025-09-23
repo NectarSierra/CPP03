@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:24:45 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 13:08:32 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 15:19:10 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void FragTrap::attack( const std::string& target )
 {
 	if (Hit_points <= 0)
 	{
-		std::cout << "[FragTrap] " << this->name << " is broken!" << std::endl;
+		std::cout << "[FragTrap] " << this->name << " is dead!" << std::endl;
 		return;
 	}
 	if (Energy_points <= 0)
@@ -70,5 +70,5 @@ void FragTrap::attack( const std::string& target )
 
 void FragTrap::highFivesGuys( void )
 {
-	std::cout << "Positive hive-fives request!" << std::endl;
+	std::cout << "[FragTrap] Positive hive-fives request!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:23 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 13:13:07 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 15:19:16 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void ClapTrap::beRepaired( unsigned int amount )
 {
 	if (Hit_points <= 0)
 	{
-		std::cout << "ClapTrap " << this->name << " is broken!" << std::endl;
+		std::cout << "ClapTrap " << this->name << " is dead!" << std::endl;
 		return;
 	}
 	if (Energy_points <= 0)

@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 10:17:41 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 13:07:34 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 15:19:21 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void ScavTrap::attack( const std::string& target )
 {
 	if (Hit_points <= 0)
 	{
-		std::cout << "[ScavTrap] " << this->name << " is broken!" << std::endl;
+		std::cout << "[ScavTrap] " << this->name << " is dead!" << std::endl;
 		return;
 	}
 	if (Energy_points <= 0)

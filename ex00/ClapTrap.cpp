@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:23 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 11:59:49 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 15:18:12 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,12 @@ void ClapTrap::attack	( const std::string& target )
 	std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->Attack_damage << " points of damage!" << std::endl;
 }
 
-void ClapTrap::takeDamage	( unsigned int amount )
+void ClapTrap::takeDamage( unsigned int amount )
 {
 	if ((amount > 0 && this->Hit_points < UINT_MAX + amount))
-	{
-		std::cout << "Error: Underflow detected operation cancelled!" << std::endl;
-		return;
-	}
-	this->Hit_points -= amount;
+		this->Hit_points = 0;
+	else
+		this->Hit_points -= amount;	
 	std::cout << "ClapTrap " << this->name << " take " << amount << " points of damage! It has now " << this->Hit_points << " hit points."<< std::endl;
 }
 
