@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:42 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/22 14:24:28 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 10:03:10 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ class ClapTrap
 		unsigned int 	Energy_points;
 		unsigned int	Attack_damage;
 	public:
-		// Constructor(void|const int|const float), copy constructor, destructor;
+		// Constructor( std::string ), copy constructor, destructor;
+		ClapTrap					( void );
 		ClapTrap					( std::string name );
 		ClapTrap					( const ClapTrap &obj );
 		~ClapTrap					( void );

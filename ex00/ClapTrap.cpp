@@ -6,13 +6,22 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:23 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/22 14:32:06 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 10:04:21 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.h"
 
-// Constructor(void|const int|const float), copy constructor, destructor;
+// Constructor( void | std::string ), copy constructor, destructor;
+ClapTrap::ClapTrap	( void )
+{
+	std::cout << "Default constructor called" << std::endl;
+	this->name = "Undefined";
+	this->Hit_points = 10;
+	this->Energy_points = 10;
+	this->Attack_damage = 0;
+}
+
 ClapTrap::ClapTrap	( std::string name ) : name(name)
 {
 	std::cout << "Default constructor called" << std::endl;
