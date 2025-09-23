@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/22 13:08:08 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 12:04:02 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 12:22:34 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,48 @@
 
 int main( void )
 {
-	ScavTrap a("Mickeal");
-	a.guardGate();
-	a.attack("2");
-	a.beRepaired(1);
-	a.takeDamage(20);
+	ScavTrap* a = new ScavTrap("Mickeal");
+	delete a;
 
-	// std::cout << std::endl;
+	std::cout << std::endl;
 	
-	// ClapTrap b("Jackson");
-	// b.attack("2");
-	// b.beRepaired(100);
-	// b.takeDamage(20);
+	ScavTrap* b = new ScavTrap("Jackson");
+	b->attack("TEST");
+	b->beRepaired(100);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	b->takeDamage(20);
+	
+	b->beRepaired(100);
+	b->attack("TEST");
+	delete b;
+
+	std::cout << std::endl;
+	
+	ScavTrap* c = new ScavTrap("Jackson");
+	c->attack("TEST");
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(100);
+	c->beRepaired(UINT_MAX);
+	delete c;
+	
 	return (0);
 }

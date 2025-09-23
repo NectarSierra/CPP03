@@ -6,7 +6,7 @@
 /*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 10:17:41 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 12:03:23 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/23 12:21:51 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,17 @@ const ScavTrap& ScavTrap::operator=	( const ScavTrap &obj )
 // Member Functions;
 void ScavTrap::attack	( const std::string& target )
 {
+	if (Hit_points <= 0)
+	{
+		std::cout << "[ScavTrap] " << this->name << " is broken!" << std::endl;
+		return;
+	}
+	if (Energy_points <= 0)
+	{
+		std::cout << "[ScavTrap] " << this->name << " has not enough energy!" << std::endl;
+		return;
+	}
+	--this->Energy_points;
 	std::cout << "[ScavTrap] " << this->name << " attacks " << target << ", causing " << this->Attack_damage << " points of damage!" << std::endl;
 }
 
