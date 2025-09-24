@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsaillez <nsaillez@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:26:36 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/24 08:16:47 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/24 09:12:09 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class FragTrap : public ClapTrap
 		// Constructor( void | std::string ), copy constructor, destructor;
 		FragTrap					( void );
 		FragTrap					( std::string name );
-		// FragTrap					( const FragTrap &obj );
+		FragTrap					( const FragTrap &obj );
 		~FragTrap					( void );
 		
 		// Overload Operators;

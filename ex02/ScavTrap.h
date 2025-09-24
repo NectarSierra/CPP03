@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsaillez <nsaillez@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 10:17:38 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/24 08:16:24 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/24 10:30:27 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ScavTrap : public ClapTrap
 		// Constructor( void | std::string ), copy constructor, destructor;
 		ScavTrap					( void );
 		ScavTrap					( std::string name );
-		// ScavTrap					( const ScavTrap &obj );
+		ScavTrap					( const ScavTrap &obj );
 		~ScavTrap					( void );
 		
 		// Overload Operators;

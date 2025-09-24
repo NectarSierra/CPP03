@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsaillez <nsaillez@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 10:17:41 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/24 08:17:29 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/24 10:30:16 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ ScavTrap::ScavTrap( std::string name )
 	this->Attack_damage = 20;
 }
 
-// ScavTrap::ScavTrap( const ScavTrap &obj )
-// {
-// 	*this = obj;
-// }
+ScavTrap::ScavTrap( const ScavTrap &obj )
+{
+	*this = obj;
+}
 
 ScavTrap::~ScavTrap( void )
 {

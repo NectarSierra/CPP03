@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsaillez <nsaillez@student.s19.be>         +#+  +:+       +#+        */
+/*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/24 07:50:53 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/24 08:17:54 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/24 10:13:44 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 	public:
 		// Constructor( void | std::string ), copy construcor, destrucor;
 		DiamondTrap						( void );
-		DiamondTrap						( std::string );
+		DiamondTrap						( std::string name );
 		DiamondTrap						( const DiamondTrap& obj);
 		~DiamondTrap					( void );
 		
@@ -28,5 +28,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		const DiamondTrap& operator= 	( const DiamondTrap &obj );
 
 		// Member functions;
-		
+		using	ScavTrap::attack;
+		void	whoAmI					( void );
+	
 };

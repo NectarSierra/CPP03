@@ -6,13 +6,13 @@
 #    By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 12:47:03 by nsaillez          #+#    #+#              #
-#    Updated: 2025/09/23 10:21:32 by nsaillez         ###   ########.fr        #
+#    Updated: 2025/09/24 10:31:49 by nsaillez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 COMP     = c++
 FLAGS    = -Wall -Wextra -Werror
-STD_FLAG = -std=c++98
+STD_FLAG = -std=c++98 
 OUT_NAME = output
 
 SRCS     = main.cpp \

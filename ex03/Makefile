@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nsaillez <nsaillez@student.s19.be>         +#+  +:+       +#+         #
+#    By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 12:47:03 by nsaillez          #+#    #+#              #
-#    Updated: 2025/09/24 08:18:20 by nsaillez         ###   ########.fr        #
+#    Updated: 2025/09/24 10:32:00 by nsaillez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 COMP     = c++
 FLAGS    = -Wall -Wextra -Werror
-STD_FLAG = -std=c++98
+STD_FLAG = -std=c++98 
 OUT_NAME = output
 
 SRCS     = main.cpp \
