@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsaillez <nsaillez@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nsaillez <nsaillez@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/23 12:24:45 by nsaillez          #+#    #+#             */
-/*   Updated: 2025/09/23 15:19:10 by nsaillez         ###   ########.fr       */
+/*   Updated: 2025/09/24 08:16:54 by nsaillez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ FragTrap::FragTrap( std::string name )
 	this->Attack_damage = 30;
 }
 
-FragTrap::FragTrap( const FragTrap &obj )
-{
-	*this = obj;
-}
+// FragTrap::FragTrap( const FragTrap &obj )
+// {
+// 	*this = obj;
+// }
 
 FragTrap::~FragTrap( void )
 {
